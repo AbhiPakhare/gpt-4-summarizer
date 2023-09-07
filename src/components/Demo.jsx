@@ -31,8 +31,7 @@ const Demo = () => {
       setArticle(newArticle);
       setAllArticles(updatedArticles);
       localStorage.setItem('articles', JSON.stringify(updatedArticles));
-
-      console.log(newArticle);
+      setArticle( prevArticleValue => ( {...prevArticleValue, url : ""}));
     }
   }
 
